@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mobdevprefi.MainActivity
 import com.example.mobdevprefi.R
 import com.example.mobdevprefi.home.HomeActivity
 import com.example.mobdevprefi.register.RegisterActivity
@@ -19,6 +20,7 @@ class LoginActivity : AppCompatActivity() {
         val etUsername: EditText = findViewById(R.id.etLoginUsername)
         val etPassword: EditText = findViewById(R.id.etLoginPassword)
         val btnLogin: Button = findViewById(R.id.btnLogin)
+        val btnBackToMainLogin: Button = findViewById(R.id.btnBackToMainLogin)
         val tvSignUpLink: TextView = findViewById(R.id.tvSignUpLink)
 
         // Retrieve credentials from RegisterActivity
@@ -47,6 +49,12 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Invalid username or password!", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        btnBackToMainLogin.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         tvSignUpLink.setOnClickListener {

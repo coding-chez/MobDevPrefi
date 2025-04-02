@@ -9,6 +9,26 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <Button
+            android:id="@+id/btnBackToMainRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←"
+            android:textSize="35dp"
+            android:padding="10dp"
+            android:layout_gravity="start"
+            android:layout_marginBottom="10dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="161dp"
+            android:text="Register"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            android:padding="40dp"
+            />
+
         <EditText
             android:id="@+id/etFirstName"
             android:layout_width="match_parent"

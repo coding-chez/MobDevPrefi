@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobdevprefi.R
 import com.example.mobdevprefi.login.LoginActivity
+import com.example.mobdevprefi.MainActivity
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +23,7 @@ class RegisterActivity : AppCompatActivity() {
         val etConfirmPassword: EditText = findViewById(R.id.etConfirmPassword)
         val btnSignUp: Button = findViewById(R.id.btnSignUp)
         val tvLoginLink: TextView = findViewById(R.id.tvLoginLink)
+        val btnBackToMainRegister: Button = findViewById(R.id.btnBackToMainRegister)
 
         btnSignUp.setOnClickListener {
             val firstName = etFirstName.text.toString().trim()
@@ -52,6 +54,13 @@ class RegisterActivity : AppCompatActivity() {
         tvLoginLink.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+        }
+
+        // 🔙 Back to MainActivity button functionality
+        btnBackToMainRegister.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }
