@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to FeatherFrame!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:id="@+id/btnSimpleListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simple List View"
+        android:background="@drawable/button_style"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnCustomListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Custom List View"
+        android:background="@drawable/button_style"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recycler View"
+        android:background="@drawable/button_style"/>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MobDevPrefi</string>
+    <string name="welcome_message">Welcome!</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="login_title">LOGIN</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="register_prompt">Don\'t have account? Sign up here.</string>
+    <string name="register_title">Register</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login_prompt">Already have an account? Login here.</string>
+</resources>
