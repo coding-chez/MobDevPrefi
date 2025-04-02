@@ -5,34 +5,48 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:background="@android:color/white"
-    android:elevation="4dp"
-    >
+    android:elevation="2dp">
+
+    <ImageView
+        android:id="@+id/imgBirdRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bird1"
+        android:contentDescription="Bird Image"
+        android:layout_marginBottom="8dp"/>
 
     <TextView
-        android:id="@+id/tvBirdName"
-        android:layout_width="103dp"
+        android:id="@+id/tvBirdNameRecycler"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Bird Name"
+        android:textColor="@color/black"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/tvScientificName"
-        android:layout_width="144dp"
+        android:id="@+id/tvScientificNameRecycler"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="14sp" />
+        android:text="Scientific Name"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"/>
 
     <TextView
-        android:id="@+id/tvHabitat"
-        android:layout_width="161dp"
+        android:id="@+id/tvBirdHabitatRecycler"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="14sp" />
+        android:text="Habitat"
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_blue_dark"/>
 
     <TextView
-        android:id="@+id/tvDescription"
-        android:layout_width="181dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/tvBirdDescriptionRecycler"
+        android:layout_width="379dp"
+        android:layout_height="52dp"
         android:layout_marginTop="5dp"
+        android:text="Short Description"
         android:textSize="14sp" />
+
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.example.mobdevprefi.views.recyclerview
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobdevprefi.R
@@ -12,10 +13,11 @@ class BirdRecyclerAdapter(private val birds: List<Bird>) :
     RecyclerView.Adapter<BirdRecyclerAdapter.BirdViewHolder>() {
 
     class BirdViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val tvBirdName: TextView = view.findViewById(R.id.tvBirdName)
-        val tvScientificName: TextView = view.findViewById(R.id.tvScientificName)
-        val tvHabitat: TextView = view.findViewById(R.id.tvHabitat)
-        val tvDescription: TextView = view.findViewById(R.id.tvDescription)
+        val imgBird: ImageView = view.findViewById(R.id.imgBirdRecycler)
+        val tvBirdName: TextView = view.findViewById(R.id.tvBirdNameRecycler)
+        val tvScientificName: TextView = view.findViewById(R.id.tvScientificNameRecycler)
+        val tvHabitat: TextView = view.findViewById(R.id.tvBirdHabitatRecycler)
+        val tvDescription: TextView = view.findViewById(R.id.tvBirdDescriptionRecycler)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BirdViewHolder {
@@ -26,6 +28,7 @@ class BirdRecyclerAdapter(private val birds: List<Bird>) :
 
     override fun onBindViewHolder(holder: BirdViewHolder, position: Int) {
         val bird = birds[position]
+        holder.imgBird.setImageResource(bird.imageResId) // Set image
         holder.tvBirdName.text = bird.name
         holder.tvScientificName.text = "Scientific Name: ${bird.scientificName}"
         holder.tvHabitat.text = "Habitat: ${bird.habitat}"

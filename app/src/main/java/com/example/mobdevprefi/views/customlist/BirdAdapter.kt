@@ -4,8 +4,9 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.BaseAdapter
+import android.widget.ImageView
+import android.widget.TextView
 import com.example.mobdevprefi.R
 import com.example.mobdevprefi.model.Bird
 
@@ -24,12 +25,14 @@ class BirdAdapter(private val context: Context, private val birds: List<Bird>) :
         val tvScientificName: TextView = view.findViewById(R.id.tvScientificName)
         val tvHabitat: TextView = view.findViewById(R.id.tvHabitat)
         val tvDescription: TextView = view.findViewById(R.id.tvDescription)
+        val ivBirdImage: ImageView = view.findViewById(R.id.ivBirdImage)  // New ImageView
 
         val bird = birds[position]
         tvBirdName.text = bird.name
         tvScientificName.text = "Scientific Name: ${bird.scientificName}"
         tvHabitat.text = "Habitat: ${bird.habitat}"
         tvDescription.text = bird.description
+        ivBirdImage.setImageResource(bird.imageResId)  // Setting image
 
         return view
     }
